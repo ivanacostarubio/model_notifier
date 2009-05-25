@@ -8,7 +8,7 @@ Feature: Mailing a newly-created Person
     | name | email           | comment      |
     | joe  | joe@example.com | hello, world |
     When I save the Person
-    Then the person's information should be given to ActionMailer
+    Then I should receive an email
   
   
   
