@@ -10,6 +10,6 @@ Feature: Mailing a newly-created Person
     When I save the Person
     Then I should receive an email
     When I open the email
-    Then I should see "user: joe"
-    And I should see "email: joe@example.com"
-    And I should see "comment: hello, world"
+    Then I should see "user: joe" in the email
+    And I should see "email: joe@example.com" in the email
+    And I should see "comment: hello, world" in the email

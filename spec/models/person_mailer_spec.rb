@@ -5,11 +5,24 @@ describe PersonMailer, "New person notification" do
   include EmailSpec::Matchers
   
   before(:each) do
-    PersonMailer.recipient_email = "corey@example.com"
+    @our_email = "corey@example.com"
+    PersonMailer.recipient_email = @our_email
     @email =  PersonMailer.create_new_person_notification("New H. Person", "new_person@example.com", "this is really cool")
   end
   
-  it "delivers to the email passed in" do
-    @email.should deliver_to("corey@example.com")
+  it "delivers to our email" do
+    @email.should deliver_to(@our_email)
+  end
+  
+  it "has the user name" do
+    @email.should have_text(/New H\. Person/)
+  end
+  
+  it "has the email" do 
+    @email.should have_text(/new_person@example.com/)
+  end
+  
+  it "has the comment" do
+    @email.should have_text(/this is really cool/)
   end
 end
