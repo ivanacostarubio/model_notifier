@@ -4,7 +4,9 @@ Feature: Mailing a newly-created Person
   I want newly created people's information to be emailed to me
 
   Scenario: New Person Getting Mailed
-    Given a new Person
+    Given the following Person
+    | name | email           | comment      |
+    | joe  | joe@example.com | hello, world |
     When I save the Person
     Then the person's information should be given to ActionMailer
   
