@@ -5,7 +5,7 @@ Feature: Externalized Observer for notifying on model creation
 
 
   Background:
-    Given the following configuration
+    And the following configuration
     | recipient_email   | model_to_watch |
     | corey@example.com | :contact_form  |
 
@@ -15,7 +15,7 @@ Feature: Externalized Observer for notifying on model creation
     Given a new ContactForm with
     | name | comment        |
     | ivan | please help me |
-    When I save it
+    When I save the contact form
     Then I should receive an email
   
   
