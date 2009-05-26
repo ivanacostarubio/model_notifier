@@ -1,0 +1,7 @@
+= model_notifier
+
+Description goes here.
+
+== Copyright
+
+Copyright (c) 2009 Ivan Acosta-Rubio. See LICENSE for details.
