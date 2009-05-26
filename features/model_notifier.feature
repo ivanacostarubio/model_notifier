@@ -10,7 +10,6 @@ Feature: Externalized Observer for notifying on model creation
     | corey@example.com | :contact_form  |
 
 
-  @focus
   Scenario: Getting an email for a Contact Form
     Given a new ContactForm with
     | name | comment        |
