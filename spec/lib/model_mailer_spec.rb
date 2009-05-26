@@ -37,10 +37,29 @@ describe ModelMailer do
       end
       @contact = ContactForm.new
     end
-    it "sets the recipient" do
-      ModelMailer.should_receive(:recipients).with(@expected_recipient)
+    it "delivers an email" do
+      ModelMailer.should_receive(:deliver_notification_email).with(anything, @contact)
       ModelMailer.after_create @contact
     end
+    
+    context "setting parameters on mail" do
+      include EmailSpec::Helpers
+      include EmailSpec::Matchers
+
+      before(:each) do
+        @configuration = mock("configuration", :deliver_to => @expected_recipient)
+        @email = ModelMailer.deliver_notification_email(@configuration, @contact)
+      end
+
+      it "delivers to the recipient on the configuration" do
+        @email.should deliver_to(@configuration.deliver_to)
+      end
+      
+      it "passes the contact object into the mail" do
+        @email.should have_text(/#{@contact}/)
+      end
+    end
   end
+
   
 end

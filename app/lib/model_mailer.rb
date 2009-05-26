@@ -1,4 +1,5 @@
-class ModelMailer
+class ModelMailer < ActionMailer::Base
+  
   def self.configure(&block)
     @configurations ||= {}
     configuration = configuration_from &block
@@ -9,8 +10,15 @@ class ModelMailer
   def self.after_create(model)
     model_name = model.class.name.underscore.to_sym
     configuration = @configurations[model_name]
-    recipients configuration.deliver_to
+    
+    ModelMailer.deliver_notification_email configuration, model
   end
+
+  def notification_email(configuration, model)
+    recipients configuration.deliver_to
+    body :model => model
+  end
+
   
   private
   def self.save_the(configuration)

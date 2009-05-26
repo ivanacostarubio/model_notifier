@@ -15,6 +15,7 @@ Feature: Externalized Observer for notifying on model creation
     Given a new ContactForm with
     | name | comment        |
     | ivan | please help me |
+
     When I save the contact form
     Then I should receive an email
   
