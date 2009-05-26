@@ -12,7 +12,7 @@ describe ModelMailer do
   
   context "when saving the watched model" do
     before(:each) do
-      @expected_recipient = expected_recipient = "corey@example.com"
+      expected_recipient = @expected_recipient = "corey@example.com"
       ModelMailer.configure do
         model :contact_form
         recipients expected_recipient
@@ -44,35 +44,34 @@ describe ModelMailer do
       it "passes the contact object into the mail" do
         @email.should have_text(/#{@contact}/)
       end
+
+
+
+      context "when rendering email according to model name" do
+        before(:each) do
+          expected_recipient = @expected_recipient
+          ModelMailer.configure do
+            model :foo
+            recipients expected_recipient
+          end
+        end
+        it "renders contact_form/notification_email.rb for ContactForm" do
+          contact = ContactForm.new
+          @email = ModelMailer.deliver_notification_email(@configuration, contact)
+          @email.should have_text(/Contact Email/)
+        end
+        it "renders foo/notification_email.rb for Foo" do
+          foo = Foo.new
+          @email = ModelMailer.deliver_notification_email(@configuration, foo)
+          @email.should have_text(/Foo Template/)
+        end
+      end
     end
+
+
 
   end
 
 
-  context "when rendering email according to model name" do
-    include EmailSpec::Helpers
-    include EmailSpec::Matchers
-    before(:each) do
-      @expected_recipient = expected_recipient = "corey@example.com"
-      ModelMailer.configure do
-        model :contact_form
-        recipients expected_recipient
-      end
-      ModelMailer.configure do
-        model :foo
-        recipients expected_recipient
-      end
-      @configuration = mock("configuration", :deliver_to => @expected_recipient)
-    end
-    it "renders contact_form/notification_email.rb for ContactForm" do
-      contact = ContactForm.new
-      @email = ModelMailer.deliver_notification_email(@configuration, contact)
-      @email.should have_text(/Contact Email/)
-    end
-    it "renders foo/notification_email.rb for Foo" do
-      foo = Foo.new
-      @email = ModelMailer.deliver_notification_email(@configuration, foo)
-      @email.should have_text(/Foo Template/)
-    end
-  end
+
 end
