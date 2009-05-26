@@ -565,3 +565,338 @@ Content-Type: text/plain; charset=utf-8
 
 Contact Email
 #<ContactForm:0x2043b28>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:05:24', 'please help me', '2009-05-26 19:05:24')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21280d4>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x211ef20>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21174f0>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Foo Template
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2102d48>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x20f7150>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:05:26', NULL, '2009-05-26 19:05:26')[0m
+  [4;35;1mContactForm Create (0.4ms)[0m   [0mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:05:26', NULL, '2009-05-26 19:05:26')[0m
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:05:29', 'please help me', '2009-05-26 19:05:29')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:05:32', 'please help me', '2009-05-26 19:05:32')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21280d4>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x211ef20>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21174f0>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Foo Template
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2102d48>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x20f7150>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:05:35', NULL, '2009-05-26 19:05:35')[0m
+  [4;35;1mContactForm Create (0.4ms)[0m   [0mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:05:35', NULL, '2009-05-26 19:05:35')[0m
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:05:37', 'please help me', '2009-05-26 19:05:37')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:05:55', 'please help me', '2009-05-26 19:05:55')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21280d4>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x211ef20>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21174f0>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Foo Template
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2102d48>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x20f7150>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:05:57', NULL, '2009-05-26 19:05:57')[0m
+  [4;35;1mContactForm Create (0.4ms)[0m   [0mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:05:57', NULL, '2009-05-26 19:05:57')[0m
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:06:00', 'please help me', '2009-05-26 19:06:00')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:06:02', 'please help me', '2009-05-26 19:06:02')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21280d4>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x211ef20>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21174f0>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Foo Template
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2102d48>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x20f7150>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:06:05', NULL, '2009-05-26 19:06:05')[0m
+  [4;35;1mContactForm Create (0.4ms)[0m   [0mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:06:05', NULL, '2009-05-26 19:06:05')[0m
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:06:07', 'please help me', '2009-05-26 19:06:07')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:06:10', 'please help me', '2009-05-26 19:06:10')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21280d4>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x211ef20>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x21174f0>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Foo Template
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2102d48>
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x20f7150>
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:06:12', NULL, '2009-05-26 19:06:12')[0m
+  [4;35;1mContactForm Create (0.4ms)[0m   [0mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES(NULL, '2009-05-26 19:06:12', NULL, '2009-05-26 19:06:12')[0m
+  [4;36;1mContactForm Create (0.4ms)[0m   [0;1mINSERT INTO "contact_forms" ("name", "updated_at", "comment", "created_at") VALUES('ivan', '2009-05-26 19:06:15', 'please help me', '2009-05-26 19:06:15')[0m
+Sent mail to corey@example.com
+
+To: corey@example.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Contact Email
+#<ContactForm:0x2040860>
