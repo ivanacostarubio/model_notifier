@@ -1,4 +1,4 @@
-class ModelMailer < ActionMailer::Base
+class ModelNotifier < ActionMailer::Base
   
   def self.configure(&block)
     @configurations ||= {}
@@ -11,7 +11,7 @@ class ModelMailer < ActionMailer::Base
     model_name = model.class.name.underscore.to_sym
     configuration = @configurations[model_name]
     
-    ModelMailer.deliver_notification_email configuration, model
+    ModelNotifier.deliver_notification_email configuration, model
   end
 
   def notification_email(configuration, model)
@@ -38,7 +38,7 @@ class ModelMailer < ActionMailer::Base
   
   def self.observe_model(model_name)
     model = model_name.to_s.camelize.constantize
-    model.after_create ModelMailer
+    model.after_create ModelNotifier
   end
   
   
