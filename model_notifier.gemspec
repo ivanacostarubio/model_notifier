@@ -2,15 +2,21 @@
 
 Gem::Specification.new do |s|
   s.name = %q{model_notifier}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ivan Acosta-Rubio", "Corey Haines"]
   s.date = %q{2009-05-26}
   s.description = %q{Notifies when a model is created}
   s.email = %q{ivan@bakedweb.net}
+  s.extra_rdoc_files = [
+    "LICENSE",
+     "README.rdoc"
+  ]
   s.files = [
     ".gitignore",
+     "LICENSE",
+     "README.rdoc",
      "Rakefile",
      "VERSION",
      "cucumber.yml",
@@ -18,6 +24,8 @@ Gem::Specification.new do |s|
      "features/step_definitions/email_steps.rb",
      "features/step_definitions/model_notifier_steps.rb",
      "features/support/env.rb",
+     "lib/model_notifier.rb",
+     "model_notifier.gemspec",
      "spec/lib/model_notifier_spec.rb",
      "spec/rcov.opts",
      "spec/spec.opts",
@@ -26,7 +34,6 @@ Gem::Specification.new do |s|
      "test_rails_app/Rakefile",
      "test_rails_app/app/controllers/application.rb",
      "test_rails_app/app/helpers/application_helper.rb",
-     "test_rails_app/app/lib/model_notifier.rb",
      "test_rails_app/app/models/contact_form.rb",
      "test_rails_app/app/models/foo.rb",
      "test_rails_app/app/views/model_notifier/contact_form/notification_email.erb",
