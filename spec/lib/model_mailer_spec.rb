@@ -10,8 +10,6 @@ describe ModelMailer do
     end
   end
   
-  
-  
   context "when saving the watched model" do
     before(:each) do
       @expected_recipient = expected_recipient = "corey@example.com"
@@ -30,32 +28,26 @@ describe ModelMailer do
       ModelMailer.should_receive(:deliver_notification_email).with(anything, @contact)
       @contact.save
     end
-  end
 
-  context "when email is being created and delivered" do
-    include EmailSpec::Helpers
-    include EmailSpec::Matchers
-    before(:each) do
-      @expected_recipient = expected_recipient = "corey@example.com"
-      ModelMailer.configure do
-        model :contact_form
-        recipients expected_recipient
+    context "when email is being created and delivered" do
+      include EmailSpec::Helpers
+      include EmailSpec::Matchers
+      before(:each) do
+        @configuration = mock("configuration", :deliver_to => @expected_recipient)
+        @email = ModelMailer.deliver_notification_email(@configuration, @contact)
       end
-      @contact = ContactForm.new
-    end
-    before(:each) do
-      @configuration = mock("configuration", :deliver_to => @expected_recipient)
-      @email = ModelMailer.deliver_notification_email(@configuration, @contact)
+
+      it "delivers to the recipient on the configuration" do
+        @email.should deliver_to(@configuration.deliver_to)
+      end
+  
+      it "passes the contact object into the mail" do
+        @email.should have_text(/#{@contact}/)
+      end
     end
 
-    it "delivers to the recipient on the configuration" do
-      @email.should deliver_to(@configuration.deliver_to)
-    end
-    
-    it "passes the contact object into the mail" do
-      @email.should have_text(/#{@contact}/)
-    end
   end
+
 
   context "when rendering email according to model name" do
     include EmailSpec::Helpers
