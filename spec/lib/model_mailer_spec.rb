@@ -61,5 +61,30 @@ describe ModelMailer do
     end
   end
 
-  
+  context "rendering email according to model name" do
+    include EmailSpec::Helpers
+    include EmailSpec::Matchers
+    before(:each) do
+      @expected_recipient = expected_recipient = "corey@example.com"
+      ModelMailer.configure do
+        model :contact_form
+        recipients expected_recipient
+      end
+      ModelMailer.configure do
+        model :foo
+        recipients expected_recipient
+      end
+      @configuration = mock("configuration", :deliver_to => @expected_recipient)
+    end
+    it "renders contact_form_delivery_notification for ContactForm" do
+      contact = ContactForm.new
+      @email = ModelMailer.deliver_notification_email(@configuration, contact)
+      @email.should have_text(/Contact Email/)
+    end
+    it "renders foo_delivery_notification for Foo" do
+      foo = Foo.new
+      @email = ModelMailer.deliver_notification_email(@configuration, foo)
+      @email.should have_text(/Foo Template/)
+    end
+  end
 end

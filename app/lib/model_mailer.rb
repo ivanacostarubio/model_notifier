@@ -17,6 +17,7 @@ class ModelMailer < ActionMailer::Base
   def notification_email(configuration, model)
     recipients configuration.deliver_to
     body :model => model
+    mailer_name "model_mailer/#{model.class.name.underscore}"
   end
 
   
