@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "features/step_definitions/model_notifier_steps.rb",
      "features/support/env.rb",
      "lib/model_notifier.rb",
+     "model_notifier.gemspec",
      "spec/lib/model_notifier_spec.rb",
      "spec/rcov.opts",
      "spec/spec.opts",
