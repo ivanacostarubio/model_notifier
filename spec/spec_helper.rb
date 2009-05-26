@@ -8,6 +8,7 @@ require 'spec/rails'
 require "email_spec/helpers"
 require "email_spec/matchers"
 
+require 'lib/model_notifier'
 
 Spec::Runner.configure do |config|
   # If you're not using ActiveRecord you should remove these

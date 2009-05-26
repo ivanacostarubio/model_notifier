@@ -9,3 +9,4 @@ Cucumber::Rails.bypass_rescue # Comment out this line if you want Rails own erro
 
 require 'cucumber/rails/rspec'
 require 'email_spec/cucumber'
+require 'lib/model_notifier'
