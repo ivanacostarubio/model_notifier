@@ -15,7 +15,7 @@
 
 module EmailHelpers
   def current_email_address
-    PersonMailer.recipient_email # Replace with your a way to find your current_email. e.g current_user.email
+    "corey@example.com" # Replace with your a way to find your current_email. e.g current_user.email
   end
 end
 World(EmailHelpers)
