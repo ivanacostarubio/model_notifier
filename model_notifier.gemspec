@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{model_notifier}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ivan Acosta-Rubio", "Corey Haines"]
-  s.date = %q{2009-05-26}
+  s.date = %q{2009-05-27}
   s.description = %q{Notifies when a model is created}
   s.email = %q{ivan@bakedweb.net}
   s.extra_rdoc_files = [
