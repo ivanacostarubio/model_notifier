@@ -3,6 +3,7 @@ Given /^the following configuration$/ do |table|
   ModelNotifier.configure do
     recipients configuration[:recipient_email]
     model configuration[:model_to_watch][1..-1].to_sym
+    subject configuration[:subject]
   end
 end
 

@@ -6,8 +6,8 @@ Feature: Externalized Observer for notifying on model creation
 
   Background:
     And the following configuration
-    | recipient_email   | model_to_watch |
-    | corey@example.com | :contact_form  |
+    | recipient_email   | model_to_watch | subject      |
+    | corey@example.com | :contact_form  | test subject |
 
 
   Scenario: Getting an email for a Contact Form
@@ -17,6 +17,8 @@ Feature: Externalized Observer for notifying on model creation
 
     When I save the contact form
     Then I should receive an email
+    When I open the email
+    Then I should see "test subject" in the subject
   
   
   

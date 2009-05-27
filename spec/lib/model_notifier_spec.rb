@@ -2,10 +2,11 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe ModelNotifier do
   context "when configuring" do
-    it "can be configured with model and recipients" do
+    it "can be configured with model, recipients, subject" do
       ModelNotifier.configure do
         model :foo
         recipients "corey@example.com"
+        subject "test email from corey"
       end
     end
   end
@@ -13,9 +14,11 @@ describe ModelNotifier do
   context "when saving the watched model" do
     before(:each) do
       expected_recipient = @expected_recipient = "corey@example.com"
+      expected_subject = @expected_subject = "this is a great email"
       ModelNotifier.configure do
         model :contact_form
         recipients expected_recipient
+        subject expected_subject
       end
       @contact = ContactForm.new
     end
@@ -33,7 +36,7 @@ describe ModelNotifier do
       include EmailSpec::Helpers
       include EmailSpec::Matchers
       before(:each) do
-        @configuration = mock("configuration", :deliver_to => @expected_recipient)
+        @configuration = mock("configuration", :deliver_to => @expected_recipient, :subject_line => @expected_subject)
         @email = ModelNotifier.deliver_notification_email(@configuration, @contact)
       end
 
@@ -45,7 +48,9 @@ describe ModelNotifier do
         @email.should have_text(/#{@contact}/)
       end
 
-
+      it "sets the subject to what we have configured" do
+        @email.should have_subject(@expected_subject)
+      end
 
       context "when rendering email according to model name" do
         before(:each) do

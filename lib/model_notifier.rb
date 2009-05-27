@@ -17,6 +17,7 @@ class ModelNotifier < ActionMailer::Base
   def notification_email(configuration, model)
     recipients configuration.deliver_to
     body :model => model
+    subject configuration.subject_line
     mailer_name "#{self.class.name.underscore}/#{model.class.name.underscore}"
   end
 
@@ -45,12 +46,16 @@ class ModelNotifier < ActionMailer::Base
   class Configuration
     attr_reader :deliver_to
     attr_reader :watched_model
+    attr_reader :subject_line
     
     def model(model_name)
       @watched_model = model_name
     end
     def recipients(recipient)
       @deliver_to = recipient
+    end
+    def subject(subject)
+      @subject_line = subject
     end
   end
 end
