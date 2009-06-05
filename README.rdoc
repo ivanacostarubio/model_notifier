@@ -1,7 +1,19 @@
 = model_notifier
 
-Description goes here.
+Sends an email when a model gets created.
 
-== Copyright
+= Configuration 
 
-Copyright (c) 2009 Ivan Acosta-Rubio. See LICENSE for details.
+Puts this inside an initializer
+
+/config/initializers/model_notifier.rb
+
+ModelNotifier.configure do
+  model :foo
+  recipients "corey@example.com"
+  subject "test email from corey"
+end
+
+== Copyleft
+
+Bakedweb.net Copyleft (c) 2009 Ivan Acosta-Rubio & Corey Haines

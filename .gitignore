@@ -6,3 +6,4 @@ tmp
 *.log
 schema.rb
 pkg/*
+doc/*
