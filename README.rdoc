@@ -6,13 +6,13 @@ Sends an email when a model gets created.
 
 Puts this inside an initializer
 
-/config/initializers/model_notifier.rb
+  config/initializers/model_notifier.rb
 
-ModelNotifier.configure do
-  model :foo
-  recipients "corey@example.com"
-  subject "test email from corey"
-end
+  ModelNotifier.configure do
+    model :foo
+    recipients "corey@example.com"
+    subject "test email from corey"
+  end
 
 == Copyleft
 
