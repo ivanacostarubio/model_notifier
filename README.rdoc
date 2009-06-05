@@ -2,9 +2,11 @@
 
 Sends an email when a model gets created.
 
-= Configuration 
+= Configuration
 
-Puts this inside an initializer
+3 simple steps:
+
+(1) Initialize it with:
 
   config/initializers/model_notifier.rb
 
@@ -13,6 +15,11 @@ Puts this inside an initializer
     recipients "corey@example.com"
     subject "test email from corey"
   end
+  
+(2) Create the views
+
+(3) corey@example.com gets and email when a record is created.
+
 
 == Copyleft
 
